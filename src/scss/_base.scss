@@ -1,0 +1,15 @@
+$white: #ffffff;
+$hover_menu_color: #fdd400;
+$font_homePage_color: #C4C4FF;
+$background_color_pages: #4c4a78;
+@font-face {
+    font-family: "Assistant-Light";
+    src: local("Assistant-Light"),
+    url("../fonts/Assistant-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Assistant-Extra-Light";
+    src: local("Assistant-Extra-Light"),
+    url("../fonts/Assistant-ExtraLight.ttf") format("truetype");
+}
