@@ -4,11 +4,11 @@
     justify-content: center;
 }
 
-.flex-row{
+@mixin flex-row{
   @include flex;
   flex-direction: row;
 }
-.flex-col{
+@mixin flex-col{
     @include flex;
     flex-direction: column;
 }

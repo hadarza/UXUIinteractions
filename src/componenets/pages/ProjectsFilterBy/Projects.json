@@ -1,0 +1,44 @@
+[
+  {
+      "title":"טנקים",
+      "category":"Animate",
+      "href":"",
+      "img": "../../images/backgroundWide.jpeg"
+  },
+  {
+    "title":"ריאקט פרויקט",
+    "category":"Web",
+    "href":"",
+    "img": "../../images/backgroundWide.jpeg"
+},
+{
+  "title":"תחמושת",
+  "category":"StoryLine",
+  "href":"",
+  "img": "../../images/backgroundWide.jpeg"
+},
+{
+  "title":"זמן הכנת פרויקט",
+  "category":"Web",
+  "href":"",
+  "img": "../../images/backgroundWide.jpeg"
+},
+{
+  "title":"שחזור אירוע",
+  "category":"Animate",
+  "href":"",
+  "img": "../../images/backgroundWide.jpeg"
+},
+{
+  "title":"פיתוח תשתית ",
+  "category":"Web",
+  "href":"",
+  "img": "../../images/backgroundWide.jpeg"
+},
+{
+  "title":"תפעול אירוע",
+  "category":"Animate",
+  "href":"",
+  "img": "../../images/backgroundWide.jpeg"
+}
+]

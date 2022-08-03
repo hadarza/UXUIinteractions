@@ -4,6 +4,8 @@ import {images} from '../../../constants/index'
 import "bootstrap/dist/css/bootstrap.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { GrLinkNext,GrLinkPrevious } from "react-icons/gr";
+
 const SlickCarosual = () => {
     const slider = useRef();
 
@@ -14,16 +16,23 @@ const SlickCarosual = () => {
         centerMode: true,
         cssEase: 'linear',
         slidesToShow: 4,
-        initialSlide:0,
-        arrows: false
+        initialSlide: 0,
+        arrows: true,
+        nextArrow:  <button className="prev-btn slick-arrow" onClick={next}>
+                        <GrLinkNext size={28}/>
+                    </button>,
+        prevArrow:  <button className="next-btn slick-arrow" onClick={previous}>
+                        <GrLinkPrevious size={28}/>
+                    </button>
+
     };
     const next = () => {
-        console.log("next")
+        console.log(slider.current)
         slider?.current?.slickNext();
         
       }
     const previous = ()  => {
-        console.log("prev")
+        console.log(slider.current);
         slider?.current?.slickPrev();
     }
   return (
@@ -62,14 +71,14 @@ const SlickCarosual = () => {
 
 </Slider>
 
-    <div className='buttons-slider'>
-        <button className="prev-btn" onClick={previous}>
-            <img src={images.next_btn}/>
+    {/* <div className='buttons-slider'>
+        <button className="prev-btn slick-arrow" onClick={next}>
+            <GrLinkNext size={28}/>
         </button>
-        <button className="next-btn" onClick={next}>
-            <img src={images.prev_btn}/>
+        <button className="next-btn slick-arrow" onClick={previous}>
+            <GrLinkPrevious size={28}/>
         </button>
-    </div>
+    </div> */}
     </>
 
   )

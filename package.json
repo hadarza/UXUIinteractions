@@ -15,7 +15,7 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
-    "@mui/material": "^5.9.1",
+    "@mui/material": "^5.9.2",
     "@react-spring/web": "^9.5.2",
     "@reduxjs/toolkit": "^1.8.3",
     "aos": "^2.3.4",
@@ -33,6 +33,7 @@
     "react-beautiful-dnd": "^13.1.0",
     "react-chartjs-2": "^4.2.0",
     "react-dom": "^18.1.0",
+    "react-icons": "^4.4.0",
     "react-image-gallery": "^1.2.8",
     "react-masonry-css": "^1.0.16",
     "react-redux": "^8.0.2",

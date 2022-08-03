@@ -3,10 +3,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Menu from "./componenets/Menu/Menu";
 import '../src/scss/app.scss'
 import images from "./constants/images";
-import HomePage from "./componenets/Sections/HomePage/HomePage";
-import SlickCarosual from "./componenets/Sections/slick-Carosual/SlickCarosual";
-import ListInfo from "./componenets/Sections/ListInfo/ListInfo";
-import infoDataList from './componenets/Sections/ListInfo/InfoDataList.json'
+import StartPage from "./componenets/pages/StartPage";
+import ProjectFilterBy from "./componenets/pages/ProjectsFilterBy/ProjectFilterBy";
+import Projects from './componenets/pages/ProjectsFilterBy/Projects.json'
 const App = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
@@ -22,18 +21,13 @@ const App = () => {
       
         <Menu isOpen={isOpen} onChange={setIsOpen}></Menu>
 
-        <article className="scroller">
-          <section>
-            <HomePage title="פרויקט אינטרקציות" subTitle="אינטרקציות לפרויקטיים  "/>
-          </section>
-          <section>
-            <SlickCarosual/>
-          </section>
-          <section>
-            <ListInfo listInfo={infoDataList}/>
-          </section>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<StartPage/>}/>
+          <Route exact path="/Projects" element={<ProjectFilterBy projectsInfo={Projects}/>}/>
 
-        </article>
+        </Routes>
+      </Router>
       </div>
 )};
 
