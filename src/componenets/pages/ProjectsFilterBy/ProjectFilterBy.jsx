@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Skeleton from '@mui/material/Skeleton';
 import {motion} from 'framer-motion'
+import { Image } from '../../../componenets/core/Image';
 
 const ProjectFilterBy = ({projectsInfo}) => {
 
@@ -29,9 +30,12 @@ const ProjectFilterBy = ({projectsInfo}) => {
     })
   
   return (
+    <>
+      <Image src={images.background_projects} alt=" Background" height="50vh" speed={1}>
+        <h3 className="image-text title_white">סוגי פרויקטיים</h3>
+      </Image>
+      
     <div className='section_projects'>
-
-      <h1 className='titles_section_h1 title_white'>סוגי פרויקטיים</h1>
       <div className='category-header'>
         {categories.map((category,index)=>(
             <h4 className={currentCategory == category ? "category active_category" : "category"} key={index} 
@@ -70,6 +74,8 @@ const ProjectFilterBy = ({projectsInfo}) => {
         </motion.div>
       </div>
     </div>
+    </>
+
   )
 }
 

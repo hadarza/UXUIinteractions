@@ -18,21 +18,21 @@ const SlickCarosual = () => {
         slidesToShow: 4,
         initialSlide: 0,
         arrows: true,
-        nextArrow:  <button className="prev-btn slick-arrow" onClick={next}>
+        nextArrow:  <button className="next-btn slick-arrow" onClick={next}>
                         <GrLinkNext size={28}/>
                     </button>,
-        prevArrow:  <button className="next-btn slick-arrow" onClick={previous}>
+        prevArrow:  <button className="prev-btn slick-arrow" onClick={previous}>
                         <GrLinkPrevious size={28}/>
                     </button>
 
     };
     const next = () => {
-        console.log(slider.current)
+        console.log("next has been clicked "+slider.current)
         slider?.current?.slickNext();
         
       }
     const previous = ()  => {
-        console.log(slider.current);
+        console.log("prev has been clicked "+slider.current);
         slider?.current?.slickPrev();
     }
   return (
@@ -41,44 +41,35 @@ const SlickCarosual = () => {
    <Slider ref={slider} {...settings}>
     <div className='slick-project'>
         <div className='Img-slick'></div>
-        <p>Project1</p>
+        <p>פרויקט 1</p>
     </div>
     
     <div className='slick-project'>
         <div className='Img-slick'></div>
-        <p>Project2</p>
+        <p>פרויקט 2</p>
     </div>
 
     <div className='slick-project'>
         <div className='Img-slick'></div>
-        <p>Project3</p>
+        <p>פרויקט 3</p>
     </div>
 
     <div className='slick-project'>
         <div className='Img-slick'></div>
-        <p>Project4</p>
+        <p>פרויקט 4</p>
     </div>
 
     <div className='slick-project'>
         <div className='Img-slick'></div>
-        <p>Project5</p>
+        <p>פרויקט 5</p>
     </div>
 
     <div className='slick-project'>
         <div className='Img-slick'></div>
-        <p>Project6</p>
+        <p>פרויקט 6</p>
     </div>
 
 </Slider>
-
-    {/* <div className='buttons-slider'>
-        <button className="prev-btn slick-arrow" onClick={next}>
-            <GrLinkNext size={28}/>
-        </button>
-        <button className="next-btn slick-arrow" onClick={previous}>
-            <GrLinkPrevious size={28}/>
-        </button>
-    </div> */}
     </>
 
   )

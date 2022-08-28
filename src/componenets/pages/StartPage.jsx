@@ -4,8 +4,7 @@ import SlickCarosual from "../../componenets/Sections/slick-Carosual/SlickCarosu
 import ListInfo from "../../componenets/Sections/ListInfo/ListInfo";
 import infoDataList from '../../componenets/Sections/ListInfo/InfoDataList.json'
 import LoadingInfo from './ProjectsFilterBy/Loading';
-
-
+import BackgroundFadeIn from '../Sections/Background_fade_in/BackgroundFadeIn'
 const StartPage = () => {
   return (
     <article className="scroller">
@@ -19,6 +18,10 @@ const StartPage = () => {
 
         <section>
             <ListInfo listInfo={infoDataList}/>
+        </section>
+
+        <section>
+            <BackgroundFadeIn title="כותרת כניסה..." subTitle="תת כותרת נכנסת"/>
         </section>
 
   </article>

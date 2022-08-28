@@ -12,3 +12,12 @@
     @include flex;
     flex-direction: column;
 }
+
+@mixin background($urlParam){
+  height: 100%; 
+  background: url($urlParam);
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

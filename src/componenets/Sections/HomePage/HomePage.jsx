@@ -5,7 +5,6 @@ const HomePage = ({title,subTitle}) => {
     <div className="imgBackground">
     <div className='titles'>
         <h1 className="title">{title}</h1>
-        <h2 className="sub-title">{subTitle}</h2>
     </div>
     <a href="#sec-scroll">
       <div class="scroll-down"></div>
