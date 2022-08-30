@@ -4,7 +4,7 @@ import {motion,useViewportScroll,useTransform} from 'framer-motion'
 
 const ParllaxImage = () => {
     const { scrollYProgress } = useViewportScroll()
-    const xPosAnim = useTransform(scrollYProgress, [0, 0.5,1], [20, -30,-100])
+    const xPosAnim = useTransform(scrollYProgress, [0, 0.5,1], [0, -50,-100])
     const rotate = useTransform(scrollYProgress, [0,1], [20,20])
 
   return (

@@ -1,10 +1,8 @@
 import React,{useRef} from 'react'
 import {images} from '../../../constants/index'
-import {motion,useAnimationControls} from 'framer-motion'
+import {motion} from 'framer-motion'
 
 const LandingPage2 = () => {
-  const controls = useAnimationControls()
-  const controlsFromLeft = useAnimationControls()
   const scrollRef = useRef(null)
   
 const variantsControl = {

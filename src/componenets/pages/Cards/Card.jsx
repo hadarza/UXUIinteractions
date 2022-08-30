@@ -1,15 +1,14 @@
-import React,{useRef} from 'react'
+import React from 'react'
 import { images } from '../../../constants'
 
 const Card = ({cards}) => {
 
   return (
-    <div className='main_content relative column'>
+    <div className=' relative flex-col'>
         <div className="height-100">
             {cards.map((card,index)=>(
-                <div className='cards-container'>
+                <div className='cards-container' key={index}>
                     <div className="Card-work">
-
                         <div class="work-image ">
                             <div className='div-img-crisp_work'>
                                 <img src={card.img}/>

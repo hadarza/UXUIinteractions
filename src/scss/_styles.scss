@@ -3,7 +3,10 @@
     align-items: center;
     justify-content: center;
 }
-
+.flex{
+  @include flex;
+  flex-wrap: wrap
+}
 @mixin flex-row{
   @include flex;
   flex-direction: row;
@@ -12,7 +15,9 @@
     @include flex;
     flex-direction: column;
 }
-
+.flex-col{
+  @include flex-col;
+}
 @mixin background($urlParam){
   height: 100%; 
   background: url($urlParam);
@@ -47,6 +52,7 @@ p{
 }
 
 img{
+  vertical-align: initial !important;
   width: 100%;
   height: 100%;
 }

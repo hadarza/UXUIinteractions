@@ -32,6 +32,11 @@ import cloud from '../images/AnimationPage/cloud.png'
 import access_pic2 from '../images/AnimationPage/access-pic-2.png'
 import parllax1 from '../images/Parllax/parllax.png'
 import parllax2 from '../images/Parllax/group-1.png'
+import imageInfo1 from '../images/RecatngleInfo/design-pic-1.png'
+import imageInfo2 from '../images/RecatngleInfo/design-pic-2.png'
+import imageInfo3 from '../images/RecatngleInfo/design-pic-3.png'
+import svgNextArrow from '../images/svgImg/svgNext.svg'
+import svgAccordion from '../images/svgImg/iconAccordion.svg'
 export default {
     openMenu,
     closeMenu,
@@ -65,7 +70,13 @@ export default {
     mouse,
     cloud,
     access_pic2,
-    parllax1
-    ,parllax2
+    parllax1,
+    parllax2,
+    imageInfo1,
+    imageInfo2,
+    imageInfo3,
+
+    svgNextArrow,
+    svgAccordion
 
 }

@@ -20,6 +20,9 @@
 }
 
 *{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
     font-family: 'Assistant-Light';
     font-size: medium;
     margin: 0;
@@ -250,6 +253,7 @@ h2 {
 
 /*Landing Page*/
 .main_content{
+    width: 100vw;
     min-height: 100vh;
     background: $background_pages;
     @include flex;
@@ -752,7 +756,9 @@ a{
   }
 
   .div-img{
-    width: 6rem;
+    width: 4rem;
+    position: absolute;
+    left: 1.3rem;
   }
 
   .div-img > img{
@@ -846,6 +852,9 @@ a{
     align-items: center;
     justify-content: center;
   }
+  .div-img-section{
+    @include flex;
+  }
 
   .bigEarth{
     width: 10rem !important;
@@ -896,8 +905,8 @@ a{
   }
   .Card-work{
     @include flex;
-    width: 30rem;
-    height: 15rem;
+    width: 24rem;
+    height: 12rem;
     color: black ;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin: 2rem;
@@ -1299,5 +1308,161 @@ span{
 }
 .parllax-div{
     position: relative;
-    top:30%;
+    top: 0;
+}
+
+.cardInformation{
+    width: 10rem;
+    height: 20rem;
+    border-radius: 15px;
+    @include flex-col;
+    margin: 1rem;
+
+}
+
+.pink_orange{
+    @include color($pink_orange);
+}
+.pink_orange > div > div{
+    width: 9rem !important;
+    top: 0.5rem;
+    left: 0.5rem;
+}
+.purple{
+    @include color($purple);
+}
+.cyan{
+    @include color($cyan);
+}
+.circle-color{
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    position: relative;
+    margin:1rem;
+}
+.circle_pinkOrange{
+    @include color($circle_pinkOrange);
+    @extend .circle-color;
+}
+
+.circle-blue{
+    @include color($blue);
+    @extend .circle-color;
+}
+
+.circle_cyan{
+    @include color($circle_cyan);
+    @extend .circle-color;
+}
+
+
+.div-info-section{
+    background: white;
+    border-radius: 15px;
+    width: 90%;
+    height: 55%;
+}
+.title_info{
+    @include flex-col;
+}
+.title_info > .small-text{
+    font-size: 0.6rem;
+    padding: 0.4rem;
+    font-family: "Assistant-Regular" !important;
+
+}
+.title_info > .regular-text{
+    font-size: 0.8rem;
+    font-family: "Assistant-SemiBold" !important;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+}
+
+.pargarph_info{
+    font-size: 0.7rem;
+    font-family: "Assistant-Regular" !important;
+    padding: 1.2rem;
+    color: $gray;
+}
+
+.div-WatchProject{
+    @include flex;
+}
+.next-div{
+    @include flex;
+    width: 7rem;
+    &:hover{
+        .div-img-next{
+         left: 0.2rem;
+        } 
+     }
+}
+
+.div-img-next{
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.5rem;
+    position:relative;
+    left: 0;
+    transition: all 0.2s ;
+    
+}
+.div-p-next{
+    >p{
+        font-size: 1.5vw !important;
+        margin:0 !important;
+        color: black;
+    }
+}
+
+/*Accordion*/
+.header-accordion{
+    @include color($blue);
+    position: relative;
+    @include flex;
+    justify-content: space-between !important;
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 20px;
+    padding: 0.1rem 1.2rem 0.1rem 0.1rem
+}
+.title-accordion{
+    margin-right: 0.5rem;
+    color: white;
+    font-size: 0.9rem;
+    width: 10rem;
+}
+.icon{
+    margin-left: 0.5rem;
+}
+.header-accordion::before {
+    content: "+";
+    height:1rem;
+    width:1rem;
+    font-size:1.5rem;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    font-weight:500;
+    font-family:courier;
+    color:white;
+  }
+.div-accordion-item{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    width: 15.1rem;
+    height: 12rem;
+    border-radius: 10px;
+}
+
+.img-insideAccordion{
+    @include background('../images/Accordion/picAccordion.png');
+    background-size: contain !important;
+}
+
+.info-accordion{
+    height: 100%;
+    width: 100%;
 }

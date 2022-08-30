@@ -16,6 +16,8 @@ import ParllaxImage from './componenets/Sections/ParllaxImage/ParllaxImage'
 import Card from "./componenets/pages/Cards/Card";
 import cards from './componenets/pages/Cards/CardJSON'
 import ParllaxImage2 from "./componenets/Sections/ParllaxImage/ParllaxImage2";
+import InfoSection from "./componenets/Sections/InfoSection/InfoSection";
+import Accordion from "./componenets/Sections/Accordion/Accordion";
 const App = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
@@ -34,13 +36,17 @@ const App = () => {
 
       <Router>
         <Routes>
-          <Route exact path="/" element={<>
+          <Route exact path="/" element={
+          <>
           <LandingPage2/>
           <SlickCarosual/>
           <AnimationPage/>
           <ParllaxImage/>
           <ParllaxImage2/>
-          <Card cards={cards}/></>}/>
+          <Card cards={cards}/>
+          <InfoSection/>
+          <Accordion/>
+          </>}/>
           <Route exact path="/Start" element={<StartPage/>}/>
 
           <Route exact path="/Projects" element={<ProjectFilterBy projectsInfo={Projects}/>}/>
