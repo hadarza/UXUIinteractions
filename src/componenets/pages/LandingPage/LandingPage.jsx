@@ -4,6 +4,8 @@ import Info from '../Info/Info'
 import CircleInfo from '../CircleInfo/CircleInfo'
 import AboutUs from '../AboutUS/AboutUs'
 import Card from '../Cards/Card'
+import cards from '../Cards/CardJSON'
+
 const LandingPage = () => {
   const controls = useAnimationControls()
   const textMotion = useAnimationControls()
@@ -37,8 +39,8 @@ const LandingPage = () => {
       </div>
       {/* <Info/> */}
       <AboutUs/>
-      <CircleInfo/>
-      <Card/>
+      {/* <CircleInfo/> */}
+      <Card cards={cards}/>
     </div>
     
   )

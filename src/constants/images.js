@@ -9,7 +9,7 @@ import hero_guy2 from '../images/LandingPage/hero-guy-2.png'
 import hero_guy3 from '../images/LandingPage/hero-guy-3.png'
 import hero_pattern_bg from '../images/LandingPage/hero-pattern-bg.png'
 import arrow from '../images/gifs/arrow.gif'
-import camera from '../images/gifs/camera.gif'
+import camera from '../images/camera.png'
 import computer from '../images/gifs/computer.gif'
 import consulation from '../images/gifs/consulation.gif'
 import film from '../images/gifs/film.gif'
@@ -23,7 +23,15 @@ import diversity from '../images/diversity.png'
 import person_icon from '../images/person-icon.jpg'
 import work_pattern from '../images/work-pattern.png'
 import crisp_work from '../images/crisp-works.png'
-
+import lifesycles from '../images/lifecycle-works.png'
+import computerLandingPage from '../images/computer.png'
+import main_pic_1 from '../images/main-pic-1.png'
+import main_pic_2 from '../images/main-pic-2.png'
+import mouse from '../images/mouse.png'
+import cloud from '../images/AnimationPage/cloud.png'
+import access_pic2 from '../images/AnimationPage/access-pic-2.png'
+import parllax1 from '../images/Parllax/parllax.png'
+import parllax2 from '../images/Parllax/group-1.png'
 export default {
     openMenu,
     closeMenu,
@@ -49,7 +57,15 @@ export default {
     diversity,
     person_icon,
     work_pattern,
-    crisp_work
-
+    crisp_work,
+    lifesycles,
+    computerLandingPage,
+    main_pic_1,
+    main_pic_2,
+    mouse,
+    cloud,
+    access_pic2,
+    parllax1
+    ,parllax2
 
 }

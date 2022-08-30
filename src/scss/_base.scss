@@ -10,6 +10,13 @@ $background_circle_icon: rgb(45,40,67);
 $background_pages: linear-gradient(180deg,#fff,#f4f6fb,#fff);
 
 
+$yellow:#FFDC60;
+$blue: #5956E9;
+$pink: #FAB8C4;
+$gray: #999FAE;
+$dark_gray: #27272E;
+$circle_gray: #525260;
+$animation_color: #ECF2F6;
 @font-face {
     font-family: "Assistant-Light";
     src: local("Assistant-Light"),
@@ -20,6 +27,12 @@ $background_pages: linear-gradient(180deg,#fff,#f4f6fb,#fff);
     font-family: "Assistant-Extra-Light";
     src: local("Assistant-Extra-Light"),
     url("../fonts/Assistant-ExtraLight.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Assistant-SemiBold";
+  src: local("Assistant-SemiBold"),
+  url("../fonts/Assistant-SemiBold.ttf") format("truetype");
 }
 /*scroll bar design */
 /* width */
@@ -41,3 +54,6 @@ $background_pages: linear-gradient(180deg,#fff,#f4f6fb,#fff);
   ::-webkit-scrollbar-thumb:hover {
     background: $font_homePage_color;
   }
+
+
+  
