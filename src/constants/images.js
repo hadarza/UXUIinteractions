@@ -37,6 +37,27 @@ import imageInfo2 from '../images/RecatngleInfo/design-pic-2.png'
 import imageInfo3 from '../images/RecatngleInfo/design-pic-3.png'
 import svgNextArrow from '../images/svgImg/svgNext.svg'
 import svgAccordion from '../images/svgImg/iconAccordion.svg'
+import skewImg from '../images/skew/skewImg.jpg'
+
+import bell_flat from '../images/MenuIconsSons/bell-flat.png'
+import calendar from '../images/MenuIconsSons/calendar.png'
+import cameraIcon from '../images/MenuIconsSons/camera.png'
+import chatbox from '../images/MenuIconsSons/chatbox.png'
+import clock from '../images/MenuIconsSons/clock.png'
+import cup from '../images/MenuIconsSons/cup.png'
+import fill from '../images/MenuIconsSons/fill.png'
+
+
+import ipad_screen from '../images/AnimComputerBubbles/ipad-screen.png'
+import ipad_shadow from '../images/AnimComputerBubbles/ipad-shadow.svg'
+import ipad from '../images/AnimComputerBubbles/ipad.svg'
+import iphone_screen from '../images/AnimComputerBubbles/iphone-screen.png'
+import iphone_shadow from '../images/AnimComputerBubbles/iphone-shadow.svg'
+import iphone from '../images/AnimComputerBubbles/iphone.svg'
+import mac_screen from '../images/AnimComputerBubbles/mac-screen.png'
+import macbook_shadow from '../images/AnimComputerBubbles/macbook-shadow.svg'
+import macbook from '../images/AnimComputerBubbles/macbook.svg'
+
 export default {
     openMenu,
     closeMenu,
@@ -77,6 +98,24 @@ export default {
     imageInfo3,
 
     svgNextArrow,
-    svgAccordion
+    svgAccordion,
+    skewImg,
+
+    bell_flat,
+    calendar,
+    cameraIcon,
+    chatbox,
+    clock,
+    cup,
+    fill,
+    ipad_screen,
+    ipad_shadow,
+    ipad,
+    iphone_screen,
+    iphone_shadow,
+    iphone,
+    mac_screen,
+    macbook_shadow,
+    macbook
 
 }

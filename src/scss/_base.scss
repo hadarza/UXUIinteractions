@@ -17,12 +17,15 @@ $gray: #999FAE;
 $dark_gray: #27272E;
 $circle_gray: #525260;
 $animation_color: #ECF2F6;
+$hover_gray: rgba(153, 159, 174, 0.4);
+$background_features: #f2f6fe;
 
 $pink_orange: #FFEDDC;
 $purple: #DBDEFF;
 $cyan: #DBF8FF;
 $circle_pinkOrange: #FAB8C4;
 $circle_cyan: #90C8FC;
+$border_menu: rgba(153, 159, 174, 0.2);
 
 @font-face {
     font-family: "Assistant-Light";
@@ -62,5 +65,3 @@ $circle_cyan: #90C8FC;
     background: $font_homePage_color;
   }
 
-
-  

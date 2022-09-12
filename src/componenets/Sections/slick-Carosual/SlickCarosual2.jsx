@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { GrLinkNext,GrLinkPrevious } from "react-icons/gr";
 
 const SlickCarosual2 = () => {
-    const slider = useRef();
+const slider = useRef();
 const [current, setCurrent] = useState(0)
 const maxLength = 4;
     const settings = {

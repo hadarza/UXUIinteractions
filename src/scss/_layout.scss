@@ -20,15 +20,18 @@
 }
 
 *{
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
+    // -webkit-user-select: none; /* Safari */
+    // -ms-user-select: none; /* IE 10 and IE 11 */
+    // user-select: none; /* Standard syntax */
     font-family: 'Assistant-Light';
     font-size: medium;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     direction: rtl;
+}
+body{
+    margin: 0;
 }
 
 html{
@@ -83,10 +86,48 @@ header{
     color: $white;
 }
 
-.Menu > .Menu-items {
-    display: grid;
-    grid-gap: 20px;
-    // justify-self: center;
+.Menu-items {
+    display: flex;
+}
+
+@media only screen and (max-width: 992px) {
+    .main_content{
+        position: relative;
+    }
+    
+    .logo{
+        padding: 2rem;
+    }
+    .header{
+        background-color: $gray;
+        z-index: 2;
+        align-items: center;
+        justify-content: flex-end !important;
+        flex-direction: column-reverse;
+        height: 100%;
+
+    }
+    .left-section{
+        display: none;
+    }
+    .right-section{
+        @include flex;
+        position: absolute;
+        bottom: 0;
+    }
+    .computer_landing_page{
+        width: 15rem !important;
+    }
+    .Menu-items{
+        >div{
+            text-align: center;
+        }
+        flex-direction: column;
+        >div>a{
+            color: white;
+            font-size: 1.2rem;
+        }
+    }
 }
 .Menu > .Menu-items > a:hover, .select{
     color: $hover_menu_color !important;
@@ -116,7 +157,11 @@ header{
 }
 
 .Menu > .Menu-items > a:hover::after {
-    transform: scaleX(0.5);
+    transform: scaleX(0.3);
+}
+
+.scaled{
+    transform: scaleX(0.3);
 }
 
 .Menu.open .Menu-items > a:nth-child(1) {
@@ -650,7 +695,6 @@ path{
 }
 h5{
     color: black;
-    font-size: 0.7rem !important;
     padding:0.2rem;
 }
 
@@ -838,10 +882,6 @@ a{
     }
   }
 
-  li{
-    @include flex;
-  }
-
   .div-img-circle{
     background-color: $background_circle_icon;
     border-radius: 50%;
@@ -900,8 +940,6 @@ a{
 
   .cards-container{
     @include flex;
-    background: $background_pages;
-
   }
   .Card-work{
     @include flex;
@@ -930,6 +968,7 @@ a{
     .Card-work {
         flex-direction: column;
         width: 14rem;
+        height: 14rem;
       }    
       .work-image{
         border-radius: 15px 15px 0px 0px !important;
@@ -1024,7 +1063,7 @@ a{
 
 .mouse{
     opacity: 0;
-    z-index: 1;
+    z-index: 2;
     width: 3rem;
     position: absolute;
     top: 22rem;
@@ -1123,6 +1162,7 @@ a{
 }
 .blue2{
     @include color($blue);
+    color: white;
 }
 
 .blue-close{
@@ -1141,7 +1181,9 @@ a{
     top: 17.5rem;
     right: 4rem;
 }
-
+.white2{
+    @include color(#ffffff)
+}
 .text-landing{
     font-size: 2rem;
     font-family: "Assistant-SemiBold" !important;
@@ -1185,7 +1227,7 @@ a{
 }
 
 
-.Menu-items>a:after{
+.Menu-items>div>a::after{
     content: "";
     width: 100%;
     height: 2px;
@@ -1197,21 +1239,23 @@ a{
     transition: all .45s;
     border-radius: 5px;
 }
-
-
-.Menu-items>a:hover:after
-{
-    transform: scaleX(0.8);
+.Menu-items>div>.HoverSons::after{
+    transform: scaleX(1);
     transform-origin: 100% 100%;
+}
 
+.Menu-items>div>a:hover::after
+{
+    transform: scaleX(1);
+    transform-origin: 100% 100%;
 }
 
 .header{
     position: absolute;
     width: 100%;
     padding: 1rem;
-    @include flex;
-    justify-content: space-between !important;
+    display: flex;
+    justify-content: space-between;
 }
 
 .right-section, .left-section{
@@ -1252,6 +1296,7 @@ span{
     width: 60% !important;
     @include flex;
   }
+
 
 .slick-arrow{
     position: absolute;
@@ -1410,7 +1455,7 @@ span{
 }
 .div-p-next{
     >p{
-        font-size: 1.5vw !important;
+        font-size: 0.8rem !important;
         margin:0 !important;
         color: black;
     }
@@ -1418,23 +1463,27 @@ span{
 
 /*Accordion*/
 .header-accordion{
-    @include color($blue);
     position: relative;
     @include flex;
     justify-content: space-between !important;
-    width: 15rem;
-    height: 2.5rem;
+    width: 17rem;
+    height: 9vh;
     border-radius: 20px;
-    padding: 0.1rem 1.2rem 0.1rem 0.1rem
+    padding: 0.1rem 0.5rem 0.1rem 0.1rem;
+    cursor: pointer;
 }
 .title-accordion{
     margin-right: 0.5rem;
     color: white;
     font-size: 0.9rem;
     width: 10rem;
+    &:hover{
+        color:$blue;
+    }
 }
 .icon{
     margin-left: 0.5rem;
+    width: 1.3rem;
 }
 .header-accordion::before {
     content: "+";
@@ -1447,22 +1496,387 @@ span{
     justify-content:center;
     font-weight:500;
     font-family:courier;
-    color:white;
   }
-.div-accordion-item{
+.info-background{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: white;
-    width: 15.1rem;
-    height: 12rem;
+    width: 17.1rem;
+    height: 9rem;
+    display: none;
+    border-radius: 0px 0px 10px 10px;
+}
+
+
+.header-background{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    width: 17.1rem;
+    height: 2.2rem;
     border-radius: 10px;
+    display: block;
+    @include flex;
 }
 
 .img-insideAccordion{
     @include background('../images/Accordion/picAccordion.png');
     background-size: contain !important;
+    height: 9rem !important;
 }
 
 .info-accordion{
     height: 100%;
     width: 100%;
 }
+
+.data-accordion{
+    width: 60%;
+}
+
+ul{
+    padding-left: 0;
+    padding-right: 1rem !important;
+    >li{
+        color: $gray;
+        font-size: 0.6rem;
+    
+    }
+}
+.item-accordion{
+    margin:0.2rem;
+}
+
+/*title for accordion*/
+.info_animation{
+    position: relative;
+    flex: 1;
+
+}
+.title_accordion{
+    font-size: 1.3rem;
+    color:#000;
+}
+.subTitle_accordion{
+    color:$gray;
+    font-size: 0.8rem;
+}
+
+.accordion{
+    flex: 1;
+}
+/*Skew Images*/
+
+.div-img-skew0,.div-img-skew1,.div-img-skew2{
+    width: 10rem;
+    height: 6rem;
+    transform: skew(-8deg);
+    overflow: hidden;
+    background: white;
+    border-radius: 10px;
+    &:hover{
+        .Skew-hover-background{
+            cursor: pointer;
+            display: flex !important;
+        }
+    }
+}
+
+.div-img-skew0{
+     > img, .Skew-hover-background{
+    transform: skew(8deg);
+    border-radius: 10px;
+    position: relative;
+    right: 1rem;
+    }
+}
+
+.div-img-skew1 {
+        >img, .Skew-hover-background{
+            border-radius: 10px;
+        }
+
+}
+.div-img-skew2 {
+    >img, .Skew-hover-background{
+        transform: skew(8deg);
+        border-radius: 10px;
+        position: relative;
+        left: 1rem;
+    }
+}
+.img-skew{
+    @include flex-col;
+    padding: 0.2rem;
+}
+.Skew-hover-background{
+    @include flex;
+    overflow: hidden;
+    border-radius: 10px;
+    display: none !important;
+    width: 10rem;
+    height: 6rem;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+}
+
+.circle-btn{
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    @include flex;
+    position: relative;
+}
+.special-circle{
+    transform: skew(8deg);
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 7px;
+  background: $blue !important;
+  transform-origin: 0%;
+  z-index: 6;
+}
+
+
+/*Bubble speech*/
+.callout {
+    position: relative;
+  }
+  
+  .bubble {
+    width: 10em;
+    border-radius: 10px;
+    padding: .5em;
+    margin: 2em auto;
+    box-sizing: border-box;
+    position: absolute;
+    background: #17214f;
+    text-align: center;
+  }
+  
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .triUp {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #17214f;
+    border-left: 15px solid transparent;
+    
+    position: absolute;
+    top: 19px;
+    left: 15px;
+  }
+
+  .full-div-sons{
+    width: 75vw;
+    height: 10rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 4;
+  }
+  .item-div{
+    padding: 0.2rem;
+    @include flex;
+    justify-content: flex-start !important;
+    >.item-div-img{
+        width: 2.5rem;
+    }
+  }
+
+  .item-title-text{
+    font-size: 0.65rem;
+  }
+  .item-subTitle-text{
+    color:$gray;
+    font-size: 0.5rem;
+    &:hover{
+        color: $hover_gray;
+        
+    }
+  }
+.full{
+    width: 100vw;
+    transform: translateY(20px);
+    transition: all .25s;
+}
+.height-vh{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+  .card-box-sons{
+    width: 100%;
+    height: 100%;
+  }
+
+  .p-color-menu{
+    color: black;
+    margin: 0 !important;
+    padding: 0.7rem;
+  }
+
+  .border-col:not(:last-child) {
+    border-right: 1px solid $border_menu;
+  }
+
+  .border-col{
+    width: 10rem;
+    height: 100%;
+    >a{
+        width: 100%;
+        cursor: pointer;
+    }
+  }
+
+  .header-category{
+    width: 100%;
+    >p{
+        text-align: center;
+        font-weight: 500;
+        line-height: 1;
+        font-size: 0.7rem;
+    }
+  }
+
+  /*grid features*/
+  .grid-features{
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 0px 0.5px inset;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+    width: 60vw;
+    height: 15rem;
+  }
+.grid-cells{
+    position: relative;
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 8px;
+    justify-items: center;
+    overflow-y: auto;
+    mask-image: linear-gradient(rgb(255, 255, 255) 80%, rgba(255, 255, 255, 0) 100%);
+
+}
+  .background-features{
+    background: $background_features;
+    height: 100vh;
+    width: 100vw;
+    @include flex;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .sectionRow{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2rem auto;
+    gap: 10px;
+    width: 100%;
+    min-width: 8rem;
+    max-width: 10rem;
+    padding: 10px;
+    border-radius: 10px;
+    
+    &:hover{
+        background: rgba(68, 66, 178, 0.1);
+        box-shadow: rgb(68 66 178 / 20%) 0px 0px 0px 0.5px inset;
+        cursor: pointer;
+    }
+    >div{
+        color: black;
+    }
+  }
+
+  .explanation-section{
+    font-size: 0.45rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .date-section{
+    padding: 0.1rem;
+    position: absolute;
+    background: rgba(68, 66, 178, 0.1);
+    border-radius: 5px;
+    padding-top: 0.1rem;
+    top: 2rem;
+    right: 0.2rem;
+    font-weight: normal;
+    line-height: 130%;
+    font-size: 0.5rem;
+    font-weight: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .title-section{
+    font-size: 0.7rem;
+    color: black;
+    line-height: 18px;
+    margin-bottom: 0.4rem !important;
+  }
+  .circle-number{
+    background: rgba(68, 66, 178, 0.1);
+    border-radius: 50%;
+    display: grid;
+    box-align: center;
+    place-items: center;
+    width: 1.3rem;
+    height: 1.3rem;
+
+  }
+  .href-feature{
+    width: 100%;
+  }
+
+  .img-screen{
+    position: absolute;
+  }
+
+  .shadow-macbook{
+    width: 12rem;
+    left: 9rem;
+  }
+
+  .macbook{
+    width: 15rem;
+    height: 15rem;
+    left: 6rem;
+    top: 4rem;    // transform: rotateX(30deg);
+
+  }
+  .macbook-screen{
+    width: 9rem;
+    height: 9rem;
+    left: 6.6rem;
+    top: 4.6rem;
+  }
+
+  .shadow-ipad{
+    width: 15rem;
+    right:3rem;
+    transform: rotateX(120deg);
+  }
+
+  .ipad{
+
+  }
+
+  .ipad-screen{
+    
+  }
