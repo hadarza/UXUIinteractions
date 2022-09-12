@@ -1849,34 +1849,60 @@ ul{
   }
 
   .shadow-macbook{
-    width: 12rem;
-    left: 9rem;
+    width: 18rem;
+    left: 13rem;
+    top: 5rem;
   }
 
   .macbook{
-    width: 15rem;
-    height: 15rem;
-    left: 6rem;
-    top: 4rem;    // transform: rotateX(30deg);
+    width: 22rem;
+    height: 22rem;
+    left: 8rem;
+    top: 4rem;
 
   }
   .macbook-screen{
-    width: 9rem;
-    height: 9rem;
-    left: 6.6rem;
-    top: 4.6rem;
+    width: 14rem;
+    height: 14rem;
+    left: 8.5rem;
+    top: 4.5rem;
   }
 
   .shadow-ipad{
-    width: 15rem;
-    right:3rem;
-    transform: rotateX(120deg);
+    width: 18rem;
+    right: 3rem;
   }
 
   .ipad{
-
+    width: 15rem;
+    top: 0rem;
+    right: 7rem;
   }
 
   .ipad-screen{
-    
+    width: 10rem;
+    height: 10rem;
+    top: 5.3rem;
+    right: 7.8rem;
+  }
+
+  .iphone{
+    width: 5rem;
+    height: 5rem;
+    right: 19rem;
+    bottom: 0rem;
+  }
+
+  .shadow-iphone{
+    width: 5rem;
+    height: 5rem;
+    right: 18.5rem;
+    bottom: 0rem;
+  }
+
+  .iphone-screen{
+    width: 4.4rem;
+    height: 4.4rem;
+    right: 19.4rem;
+    bottom: 0.2rem;
   }
