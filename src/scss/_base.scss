@@ -1,7 +1,32 @@
 $white: #ffffff;
 $hover_menu_color: #fdd400;
+$scroll_click: #fdd200;
 $font_homePage_color: #C4C4FF;
 $background_color_pages: #4c4a78;
+$hover_btn_prevNext: #e7e7e7;
+$background_card: linear-gradient(150deg,#c99fff -20%,#4a4eff);
+$title_landing_page: rgb(26, 25, 45);
+$background_circle_icon: rgb(45,40,67);
+$background_pages: linear-gradient(180deg,#fff,#f4f6fb,#fff);
+$content: '+';
+
+$yellow:#FFDC60;
+$blue: #5956E9;
+$pink: #FAB8C4;
+$gray: #999FAE;
+$dark_gray: #27272E;
+$circle_gray: #525260;
+$animation_color: #ECF2F6;
+$hover_gray: rgba(153, 159, 174, 0.4);
+$background_features: #f2f6fe;
+
+$pink_orange: #FFEDDC;
+$purple: #DBDEFF;
+$cyan: #DBF8FF;
+$circle_pinkOrange: #FAB8C4;
+$circle_cyan: #90C8FC;
+$border_menu: rgba(153, 159, 174, 0.2);
+
 @font-face {
     font-family: "Assistant-Light";
     src: local("Assistant-Light"),
@@ -13,3 +38,30 @@ $background_color_pages: #4c4a78;
     src: local("Assistant-Extra-Light"),
     url("../fonts/Assistant-ExtraLight.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Assistant-SemiBold";
+  src: local("Assistant-SemiBold"),
+  url("../fonts/Assistant-SemiBold.ttf") format("truetype");
+}
+/*scroll bar design */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $font_homePage_color;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $font_homePage_color;
+  }
+

@@ -1,39 +1,42 @@
 import React,{useState} from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Menu from "./componenets/Menu/Menu";
+import Menu2 from "./componenets/Menu2/Menu";
+
 import '../src/scss/app.scss'
 import images from "./constants/images";
-import HomePage from "./componenets/Sections/HomePage/HomePage";
-import SlickCarosual from "./componenets/Sections/slick-Carosual/SlickCarosual";
-import ListInfo from "./componenets/Sections/ListInfo/ListInfo";
-import infoDataList from './componenets/Sections/ListInfo/InfoDataList.json'
+import StartPage from "./componenets/pages/StartPage";
+import ProjectFilterBy from "./componenets/pages/ProjectsFilterBy/ProjectFilterBy";
+import Projects from './componenets/pages/ProjectsFilterBy/Projects.json'
+import { CircleIndicator } from "./componenets/Sections/LineProgress/LineProgress";
+import DownloadSignature from "./componenets/Sections/DownloadSignature/DownloadSignature";
+import Confetti from "./componenets/pages/Confetti/Conf";
 const App = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
       <div className="App">
-        <header>
+        {/* <header>
           <div className="header-div">
-            <span className="menu-btn" onClick={() => setIsOpen(true)}>
-              <img src={images.openMenu}/>
-            </span>
-            <div id="site-header-scrolling" className="site-header-scrolling"></div>
+              <div className="menu-btn" onClick={() => setIsOpen(true)}>
+                <img src={images.openMenu}/>
+              </div>
+            <div className="logo"></div>
           </div>
-        </header>
+        </header> */}
       
-        <Menu isOpen={isOpen} onChange={setIsOpen}></Menu>
+        {/* <Menu isOpen={isOpen} onChange={setIsOpen}></Menu> */}
+        <Menu2 isOpen={isOpen} onChange={setIsOpen}></Menu2>
 
-        <article className="scroller">
-          <section>
-            <HomePage title="פרויקט אינטרקציות" subTitle="אינטרקציות לפרויקטיים  "/>
-          </section>
-          <section>
-            <SlickCarosual/>
-          </section>
-          <section>
-            <ListInfo listInfo={infoDataList}/>
-          </section>
+      <Router>
+        <Routes>
+        <Route path="/Start" element={<StartPage/>}/>
+          <Route exact path="/" element={<DownloadSignature/>}/>
+          <Route path="/signature" element={<DownloadSignature/>}/>
+          <Route path="/Projects" element={<ProjectFilterBy projectsInfo={Projects}/>}/>
+        </Routes>
+      </Router>
 
-        </article>
+
       </div>
 )};
 
