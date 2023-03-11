@@ -5,11 +5,11 @@ import "bootstrap/dist/css/bootstrap.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { GrLinkNext,GrLinkPrevious } from "react-icons/gr";
+import ObjectCarosual from './ObjectCarosual';
 
 const SlickCarosual2 = () => {
 const slider = useRef();
 const [current, setCurrent] = useState(0)
-const maxLength = 4;
     const settings = {
         className: "slider variable-width",
         infinite: false,
@@ -19,6 +19,15 @@ const maxLength = 4;
         slidesToScroll: 1,
         initialSlide: 0,
         arrows: true,
+        responsive:[
+            {
+                breakpoint: 960,
+                settings:{
+                    slidesToShow:1,
+                    slidesToScroll:1
+                }
+            }
+        ],
         nextArrow:  <button className="next-btn slick-arrow" onClick={next}>
                         <GrLinkNext size={28}/>
                     </button>,
@@ -42,55 +51,15 @@ const maxLength = 4;
   return (
 
    <Slider ref={slider} {...settings}>
-        <div className='slick-project'>
-            <div className='Img-slick'>
-                <div className='center-img'>
-                    <img src={images.camera}/>
-                </div>
-            </div>
-            <div className='info-slick'>
-                <h2>Title here</h2>
-                <p>Kickstart your design process for a wide variety of apps such as calendar, analytics, virtual assistant, file manager.</p>
-                </div>        
-            </div>
+    {[1,2,3,4,5].map((object,index)=>(
+        <ObjectCarosual/>
 
-        <div className='slick-project'>
-            <div className='Img-slick'>
-                <div className='center-img'>
-                    <img src={images.camera}/></div>
-                </div>
-            <div className='info-slick'>
-            <h2>Title here</h2>
-             <p>Kickstart your design process for a wide variety of apps such as calendar, analytics, virtual assistant, file manager.</p>
-            </div>
-        </div>
+    ))}
+    
 
 
 
-        <div className='slick-project'>
-            <div className='Img-slick'>
-                <div className='center-img'>
-                    <img src={images.camera}/>
-                </div>
-            </div>
-            <div className='info-slick'>
-                <h2>Title here</h2>
-                <p>Kickstart your design process for a wide variety of apps such as calendar, analytics, virtual assistant, file manager.</p>
-            </div>        
-        </div>
-
-
-        <div className='slick-project'>
-            <div className='Img-slick'>
-                <div className='center-img'>
-                    <img src={images.camera}/>
-                </div>
-            </div>
-            <div className='info-slick'>
-                <h2>Title here</h2>
-                <p>Kickstart your design process for a wide variety of apps such as calendar, analytics, virtual assistant, file manager.</p>
-            </div>        
-        </div>
+      
 </Slider>
 
 

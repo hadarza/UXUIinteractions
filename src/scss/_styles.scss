@@ -62,6 +62,8 @@ p{
   width: 100vw;
 }
 
+
+
 .absolute{
   position: absolute;
   transform: translateY(0) translateZ(0) !important;
@@ -151,4 +153,9 @@ right: 0;
   right: 0;
   left: 0;
   bottom: 0;
+}
+
+#photo{
+  position: static;
+  top: 3rem;
 }

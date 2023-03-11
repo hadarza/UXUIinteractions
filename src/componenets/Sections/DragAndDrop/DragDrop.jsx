@@ -20,7 +20,7 @@ const taskStatus = {
     items: []
   }
 };
-
+/*<StrictMode> dont work in react-beautiful dnd */
 const onDragEnd = (result, columns, setColumns) => {
   /* columns respresent taskStatus */
   console.log(columns)
@@ -74,7 +74,7 @@ function DragDrop() {
   const [columns, setColumns] = useState(taskStatus);
   return (
     <div className="only-flex m-3">
-        <div className="">
+        <div>
             <h3 className='title_accordion'>אנימציית גרירה בין רשימות</h3>
             <h6 className='subTitle_accordion'>דוגמה לאנימציה של גרירה בין רשימות על ידי שימוש בספרייה react-beautiful-dnd</h6>
             <h7 className="red">נא לקרוא הערות בקוד </h7>

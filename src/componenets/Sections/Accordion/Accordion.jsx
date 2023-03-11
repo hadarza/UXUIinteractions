@@ -1,7 +1,6 @@
 import React from 'react'
 import ItemAccordion from './ItemAccordion'
 import ItemsAccordion from './AccordionJson'
-import SpeechText from '../SpeechText/SpeechText'
 
 const Accordion = () => {
   

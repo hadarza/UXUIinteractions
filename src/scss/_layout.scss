@@ -39,6 +39,7 @@ html{
     font-size: calc(25px + 0.390625vw);
 }
 .App {
+    // overflow-x: hidden;
     position: relative;
     display: grid;
     height: 100vh;
@@ -501,13 +502,11 @@ section{
    }
 }
 .center-img{
-    @include flex;
     padding: 1.5rem;
 }
 
 .info-slick{
     width: 12rem;
-    text-align: left;
     >p, >h2{
         color: white;
         font-size: 0.6rem;
@@ -1485,18 +1484,18 @@ span{
     margin-left: 0.5rem;
     width: 1.3rem;
 }
-.header-accordion::before {
-    content: "+";
-    height:1rem;
-    width:1rem;
-    font-size:1.5rem;
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:center;
-    font-weight:500;
-    font-family:courier;
-  }
+// .header-accordion::before {
+//     content: var(--content, $content);
+//     height:1rem;
+//     width:1rem;
+//     font-size:1.5rem;
+//     display:flex;
+//     flex-direction:row;
+//     align-items:center;
+//     justify-content:center;
+//     font-weight:500;
+//     font-family:courier;
+//   }
 .info-background{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background-color: white;
@@ -1716,9 +1715,17 @@ ul{
 }
 .height-vh{
     position: relative;
+    width: 100%;
     height: 100vh;
-    width: 100vw;
+    margin: 0px auto;
+
+    >img{
+        width: auto !important;
+    }
 }
+
+
+
   .card-box-sons{
     width: 100%;
     height: 100%;
@@ -1843,66 +1850,101 @@ ul{
   .href-feature{
     width: 100%;
   }
-
-  .img-screen{
+  
+  .macbook{
+    // position: absolute;
+    // top: 0;
+    // right: 0;
     position: absolute;
+    left: 122px;
+    top: 45px;
   }
 
   .shadow-macbook{
-    width: 18rem;
-    left: 13rem;
-    top: 5rem;
-  }
+    // width: 80% !important;
 
-  .macbook{
-    width: 22rem;
-    height: 22rem;
-    left: 8rem;
-    top: 4rem;
+    position: absolute;
+    left: 290px;
+    top: 195px;
+  }
+ 
+.macbook-screen{
+    position: absolute;
+    width: 447px;
+    height: 447px;
+    left: 146.5px;
+    top: 68.6px;
+}
+.shadow-ipad{
+    position: absolute;
+    left: 715px;
+    top: 14px;
+}
+.ipad{
+    position: absolute;
+    left: 700px;
+    top: -5px;
+}
 
-  }
-  .macbook-screen{
-    width: 14rem;
-    height: 14rem;
-    left: 8.5rem;
-    top: 4.5rem;
-  }
+.ipad-screen{
+    position: absolute;
+    width: 327.79px;
+    height: 327.78px;
+    left: 840px;
+    top: 15px;
+}
+.shadow-iphone{
+    position: absolute;
+    left: 706px;
+    top: 458px;
+}
 
-  .shadow-ipad{
-    width: 18rem;
-    right: 3rem;
-  }
+.iphone{
+    position: absolute;
+    left: 700px;
+    top: 452px;
+}
 
-  .ipad{
-    width: 15rem;
-    top: 0rem;
-    right: 7rem;
-  }
+.iphone-screen{
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: 710px;
+    top: 464px;
+}
 
-  .ipad-screen{
-    width: 10rem;
-    height: 10rem;
-    top: 5.3rem;
-    right: 7.8rem;
-  }
+.scaling{
+    transform-origin: center left;
+    width: 100%;
+    transform: scale(0.4);
 
-  .iphone{
-    width: 5rem;
-    height: 5rem;
-    right: 19rem;
-    bottom: 0rem;
-  }
+    height: 100vh;
+}
 
-  .shadow-iphone{
-    width: 5rem;
-    height: 5rem;
-    right: 18.5rem;
-    bottom: 0rem;
-  }
+@media screen and (min-width:620px){
+    .scaling{
+        transform: scale(0.5)
+    }
+}
 
-  .iphone-screen{
-    width: 4.4rem;
-    height: 4.4rem;
-    right: 19.4rem;
-    bottom: 0.2rem;
-  }
+@media screen and (min-width:960px){
+    .scaling{
+        transform: scale(0.6)
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .scaling{
+        transform: scale(0.9)
+    }
+}
+
+.signature{
+    width: 80%;
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 8rem;
+}
+.screenshot{
+    width: 3rem;
+}
