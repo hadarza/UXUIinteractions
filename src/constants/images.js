@@ -57,7 +57,7 @@ import iphone from '../images/AnimComputerBubbles/iphone.svg'
 import mac_screen from '../images/AnimComputerBubbles/mac-screen.png'
 import macbook_shadow from '../images/AnimComputerBubbles/macbook-shadow.svg'
 import macbook from '../images/AnimComputerBubbles/macbook.svg'
-
+import HugeImage from '../images/image.webp'
 export default {
     openMenu,
     closeMenu,
@@ -116,6 +116,7 @@ export default {
     iphone,
     mac_screen,
     macbook_shadow,
-    macbook
+    macbook,
+    HugeImage
 
 }

@@ -77,7 +77,7 @@ function DragDrop() {
         <div>
             <h3 className='title_accordion'>אנימציית גרירה בין רשימות</h3>
             <h6 className='subTitle_accordion'>דוגמה לאנימציה של גרירה בין רשימות על ידי שימוש בספרייה react-beautiful-dnd</h6>
-            <h7 className="red">נא לקרוא הערות בקוד </h7>
+            <h6 className="red">נא לקרוא הערות בקוד </h6>
         </div>
        
       <div
